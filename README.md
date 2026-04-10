@@ -77,7 +77,7 @@ Abra o arquivo index.html no navegador.
 
 ---
 
-###🔄 5. Ajustar a URL para execução local
+### 🔄 5. Ajustar a URL para execução local
 
 No arquivo index.html, verifique se a requisição está apontando para:
 
