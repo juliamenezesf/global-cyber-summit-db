@@ -1,11 +1,12 @@
+import os
 import oracledb
 
 def conectar():
     try:
         connection = oracledb.connect(
-            user="DB_USER",
-            password="DB_PASSWORD",
-            dsn="DB_DSN"
+            user=os.getenv("DB_USER"),
+            password=os.getenv("DB_PASSWORD"),
+            dsn=os.getenv("DB_DSN")
         )
 
         print("Conectado com sucesso!")
