@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Global Cyber Summit</title>
+
+<style>
+body {
+    background: #0f172a;
+    color: white;
+    font-family: Arial;
+    padding: 40px;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+}
+
+.tag {
+    background: #06b6d4;
+    padding: 5px 15px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+h1 {
+    color: #22d3ee;
+}
+
+.box {
+    border-left: 4px solid #22d3ee;
+    padding: 15px;
+    background: #111827;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #06b6d4;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#resposta {
+    margin-top: 10px;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+    <div class="tag">SEGURANÇA & AUDITORIA</div>
+
+    <h1>Global Cyber Summit</h1>
+    <p>Proteção contra Inscrições Fraudulentas</p>
+
+    <div class="box">
+        <h3>Contexto do Desafio</h3>
+        <p>
+        Nosso sistema detectou ataques de bots criando inscrições falsas.
+        Sua missão é identificar e remover essas fraudes automaticamente.
+        </p>
+    </div>
+
+    <div class="box">
+        <h3>Regras de Negócio</h3>
+        <ul>
+            <li>Verificar inscrições com status PENDING</li>
+            <li>Detectar emails suspeitos</li>
+            <li>Cancelar inscrição fraudulenta</li>
+            <li>Registrar auditoria</li>
+        </ul>
+    </div>
+
+    <button onclick="executar()">Executar Varredura</button>
+
+    <p id="resposta"></p>
+
+</div>
+
+<script>
+async function executar() {
+    document.getElementById("resposta").innerText = "Processando...";
+
+    try {
+        const res = await fetch("http://127.0.0.1:5000/processar", {
+            method: "POST"
+        });
+
+        const data = await res.json();
+
+        document.getElementById("resposta").innerText = data.mensagem;
+
+    } catch (err) {
+        document.getElementById("resposta").innerText = "Erro ao conectar";
+    }
+}
+</script>
+
+</body>
+</html>
