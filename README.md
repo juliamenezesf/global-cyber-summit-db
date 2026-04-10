@@ -41,7 +41,7 @@ A interface web envia requisições para uma API em Python (Flask), que executa 
 
 ---
 
-## ▶️ Como Executar
+## ▶️ Como Executar (caso queira efetuar o teste de maneira local)
 
 ### 🔧 1. Instalar dependências
 
