@@ -1,6 +1,6 @@
 from flask import Flask, jsonify
 from flask_cors import CORS
-from varredura import executar_varredura
+from cp2dados.varredura import executar_varredura
 
 app = Flask(__name__)
 CORS(app)  

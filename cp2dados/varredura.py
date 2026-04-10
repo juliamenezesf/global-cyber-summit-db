@@ -1,4 +1,4 @@
-from conexao import conectar
+from cp2dados.conexao import conectar
 import oracledb
 
 def executar_varredura():
