@@ -64,7 +64,12 @@ No terminal, defina as variáveis de ambiente:
 
 ---
 ### 🚀 3. Iniciar o backend (API)
-Execute:
+No terminal, navegue até a pasta onde está o arquivo `app.py`:
+
+- cd cp2dados/cp2dados
+
+Em seguida execute:
+
 - python app.py
 
 Se tudo estiver certo, a API ficará rodando localmente.
@@ -100,6 +105,18 @@ redução do trust_score
 registros inseridos na tabela LOG_AUDITORIA
 
 Se essas alterações acontecerem, o sistema está funcionando corretamente.
+
+---
+
+### ⚠️ Observações Importantes
+
+- O backend (app.py) deve estar em execução antes de utilizar a interface.
+- Caso execute o projeto localmente, verifique se a URL da requisição no `index.html` está configurada para:
+
+http://127.0.0.1:10000/processar
+
+- Certifique-se de que as credenciais do banco estejam corretas.
+- Os imports do projeto devem ser executados a partir da pasta correta (cp2dados).
 
 ---
 
