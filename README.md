@@ -41,25 +41,65 @@ A interface web envia requisições para uma API em Python (Flask), que executa 
 
 ---
 
-## 🔐 Configuração do Banco
+## ▶️ Como Executar
 
-Antes de executar o projeto, configure suas credenciais no arquivo `conexao.py`:
+### 🔧 1. Instalar dependências
 
-user="SEU_USUARIO"
-password="SUA_SENHA"
-dsn="SEU_DSN"
+Abra o terminal na pasta do projeto e execute:
+
+- pip install flask oracledb
 
 ---
 
-## ▶️ Como Executar
+### 🔐 2. Configurar acesso ao banco
 
-1. Instale as dependências:
-- pip install flask oracledb
+Antes de rodar, você precisa informar os dados do banco Oracle.
 
-2. Execute a aplicação:
+No terminal, defina as variáveis de ambiente:
+- DB_USER=seu_usuario
+- DB_PASSWORD=sua_senha
+- DB_DSN=oracle.fiap.com.br:1521/ORCL
+
+(Use suas próprias credenciais do banco)
+
+---
+### 🚀 3. Iniciar o backend (API)
+Execute:
 - python app.py
 
-3. Abra o arquivo index.html no navegador e clique em Executar Varredura.
+Se tudo estiver certo, a API ficará rodando localmente.
+
+---
+
+### 🌐 4. Abrir a interface web
+
+Abra o arquivo index.html no navegador.
+
+---
+
+###🔄 5. Ajustar a URL para execução local
+
+No arquivo index.html, verifique se a requisição está apontando para:
+
+- http://127.0.0.1:10000/processar
+
+---
+
+### ▶️ 6. Executar a varredura
+
+No site, clique no botão "Executar Varredura".
+
+---
+
+### 🧪 7. Validar no banco
+
+Após clicar no botão, consulte o banco para verificar:
+
+inscrições com status alterado para CANCELLED
+redução do trust_score
+registros inseridos na tabela LOG_AUDITORIA
+
+Se essas alterações acontecerem, o sistema está funcionando corretamente.
 
 ---
 
