@@ -8,6 +8,8 @@ Projeto desenvolvido para o Checkpoint 2 da FIAP, com foco na integração entre
 
 Detectar inscrições fraudulentas no sistema do Global Cyber Summit, utilizando regras de negócio implementadas em PL/SQL e integração com uma interface web.
 
+A interface web envia requisições para uma API em Python (Flask), que executa a lógica PL/SQL diretamente no banco Oracle.
+
 ---
 
 ## ⚙️ Tecnologias Utilizadas
