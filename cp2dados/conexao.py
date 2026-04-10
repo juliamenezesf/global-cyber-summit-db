@@ -3,9 +3,9 @@ import oracledb
 def conectar():
     try:
         connection = oracledb.connect(
-            user="SEU_USUARIO",
-            password="SUA_SENHA",
-            dsn="SEU_DSN"
+            user="DB_USER",
+            password="DB_PASSWORD",
+            dsn="DB_DSN"
         )
 
         print("Conectado com sucesso!")
